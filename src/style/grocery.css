@@ -1,0 +1,345 @@
+/* home.css */
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-button {
+  background-color: green;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: darkgreen;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: green;
+  box-shadow: 0 0 10px rgba(0, 128, 0, 0.2);
+}
+
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+
+.product-card .desc {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: green;
+  margin-top: 8px;
+}
+
+.product-card .rating {
+  color: orange;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.modal h2 {
+  margin-bottom: 15px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.p {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.p:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+.r {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.r:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+/* Add this to your CSS file (e.g., grocery.css or a module) */
+
+.product-card {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  height: 150px; /* adjust height as needed */
+  object-fit: cover; /* cover ensures image fills without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+/* Hero Banner */
+.hero-banner {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f0f8ff;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.hero-banner h1 {
+  font-size: 2em;
+  color: #2e8b57;
+}
+
+.hero-banner p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Categories */
+.categories {
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.category-card {
+  background-color: #e0f7fa;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  background-color: #b2ebf2;
+}
+
+/* Offers */
+.offers {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fff8dc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.offers h2 {
+  margin-bottom: 10px;
+}
+
+.offers ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.offers li {
+  padding: 5px 0;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: #eaeaea;
+  border-radius: 8px;
+  color: #333;
+}
+
+.footer .social-icons span {
+  font-size: 1.2em;
+  margin: 0 8px;
+  cursor: pointer;
+}
+/* ShowProduct Styles */
+.show-product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* centers vertically */
+}
+
+.show-product-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  gap: 20px;
+}
+
+.show-product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.show-product-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.show-product-content h3 {
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.show-product-content p {
+  margin: 4px 0;
+}
+
+.show-product-content .price {
+  font-weight: bold;
+  color: green;
+}
+
+.show-product-content .rating {
+  color: orange;
+  font-weight: bold;
+}
+
+.show-product-content .Qty {
+  font-weight: bold;
+}
+
+.show-product-content .button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}

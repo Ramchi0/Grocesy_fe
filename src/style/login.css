@@ -1,0 +1,176 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #eef2f3; /* optional */
+}
+
+
+/* Background with subtle animation */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  background: linear-gradient(-45deg, #eef2f3, #d6dde2, #cdd4da, #eef2f3);
+  background-size: 400% 400%;
+  animation: backgroundShift 10s ease infinite;
+  transition: background 0.5s ease;
+}
+
+/* Card with fade-in + pop-up animation */
+.auth-card {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  width: 340px;
+  text-align: center;
+  animation: cardEntry 0.8s ease forwards;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.auth-card:hover {
+  transform: scale(1);
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card h2 {
+  margin-bottom: 20px;
+  color: #112284;
+  font-size: 26px;
+  font-weight: bold;
+  animation: fadeIn 1s ease 0.3s forwards;
+  opacity: 0;
+}
+
+/* Inputs with focus glow and transition */
+.auth-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.auth-input:focus {
+  border-color: #112284;
+  box-shadow: 0 0 10px rgba(17, 34, 132, 0.3);
+  transform: scale(1.02);
+}
+
+/* Gradient Button with glowing hover */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #112284, #4055c7);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+  transition: background 0.4s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(90deg, #0e1c6e, #3747b0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 34, 132, 0.4);
+}
+
+/* Ripple effect on button click */
+.auth-btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
+
+.auth-btn:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Toggle link animation */
+.toggle-link {
+  margin-top: 15px;
+  cursor: pointer;
+  color: #112284;
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-link:hover {
+  color: #0e1c6e;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .auth-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .auth-input {
+    font-size: 14px;
+  }
+
+  .auth-btn {
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cardEntry {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes ripple {
+  to {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
